@@ -1,0 +1,32 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons and contents
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Show corresponding content
+            const tabId = this.getAttribute('data-tab');
+            document.getElementById(tabId).classList.add('active');
+            
+            // Trigger animations for the newly active tab
+            const animatedElements = document.querySelectorAll(`#${tabId} .animate-on-scroll`);
+            animatedElements.forEach(element => {
+                element.classList.remove('animated');
+                void element.offsetWidth; // Trigger reflow
+                element.classList.add('animated');
+            });
+        });
+    });
+    
+    // Initialize first tab as active
+    if (tabButtons.length > 0) {
+        tabButtons[0].click();
+    }
+});
