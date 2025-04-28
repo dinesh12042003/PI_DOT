@@ -86,28 +86,270 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-video">
+    <section class="hero-slider">
+        <!-- Slide 1 -->
+        <div class="hero-slide active">
+          <div class="hero-video">
             <video autoplay muted loop>
-                <source src="assets/videos/hero-background.mp4" type="video/mp4">
+              <source src="assets/videos/hero-background.mp4" type="video/mp4">
             </video>
             <div class="video-overlay"></div>
-        </div>
-        <div class="container">
+          </div>
+          <div class="container">
             <div class="hero-content">
-                <h1 class="animate-on-scroll">Transforming Futures Through Innovation</h1>
-                <p class="animate-on-scroll">Empowering businesses and individuals with cutting-edge solutions in education, automation, and talent development</p>
-                <div class="hero-buttons animate-on-scroll">
-                    <a href="solutions.html" class="cta-button primary">Explore Solutions</a>
-                    <a href="contact.html" class="cta-button secondary">Get in Touch</a>
-                </div>
+              <h1 class="animate-on-scroll" style="font-size: 3.5rem; margin-top: 250px;">AI</h1>
+              <p class="animate-on-scroll" style="font-size: 1.24rem; margin-top: 17px;">= difference</p>
+              <div class="hero-buttons animate-on-scroll">
+                <a href="programs.html" class="cta-button primary">View Programs</a>
+                <a href="partnerships.html" class="cta-button secondary">Partner With Us</a>
+              </div>
             </div>
+          </div>
         </div>
+      
+        <!-- Slide 2 -->
+        <div class="hero-slide">
+          <div class="hero-video">
+            <video autoplay muted loop>
+              <source src="assets/videos/hero-background.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+          </div>
+          <div class="container">
+            <div class="hero-content">
+              <h1 class="animate-on-scroll">Future-Ready Talent Development</h1>
+              <p class="animate-on-scroll">Industry-aligned curriculum designed with leading employers to build in-demand skills</p>
+              <div class="hero-buttons animate-on-scroll">
+                <a href="curriculum.html" class="cta-button primary">Explore Curriculum</a>
+                <a href="recruit.html" class="cta-button secondary">Hire Our Graduates</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Slide 3 -->
+        <div class="hero-slide">
+          <div class="hero-video">
+            <video autoplay muted loop>
+              <source src="assets/videos/hero-background.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+          </div>
+          <div class="container">
+            <div class="hero-content">
+              <h1 class="animate-on-scroll">Transformative Learning Ecosystems</h1>
+              <p class="animate-on-scroll">Blending academic excellence with real-world application through technology-enhanced education</p>
+              <div class="hero-buttons animate-on-scroll">
+                <a href="technology.html" class="cta-button primary">Our Platform</a>
+                <a href="demo.html" class="cta-button secondary">Request Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Slider Controls (Hidden arrows) -->
+        <div class="slider-controls">
+          <div class="slider-dots">
+            <button class="dot active" aria-label="Go to slide 1"></button>
+            <button class="dot" aria-label="Go to slide 2"></button>
+            <button class="dot" aria-label="Go to slide 3"></button>
+          </div>
+        </div>
+      
+        <!-- Original Scroll Indicator -->
         <div class="scroll-indicator">
             <span>Scroll</span>
             <div class="arrow-down"></div>
         </div>
-    </section>
+
+      </section>
+      
+      <style>
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            margin-top: 250px;
+            }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Hero Slider Base Styles */
+        .hero-slider {
+          position: relative;
+          height: 100vh;
+          overflow: hidden;
+        }
+      
+        .hero-slide {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          transition: opacity 1s ease-in-out;
+        }
+      
+        .hero-slide.active {
+          opacity: 1;
+          z-index: 1;
+        }
+      
+        /* Video Background Styles */
+        .hero-video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+        }
+      
+        .hero-video video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      
+        .video-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.821);
+        }
+      
+        /* Slider Controls - Dots Only */
+        .slider-controls {
+          position: absolute;
+          bottom: 100px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 2;
+        }
+      
+        .slider-dots {
+          display: flex;
+          gap: 10px;
+        }
+      
+        .slider-dots .dot {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          border: 2px solid white;
+          background: transparent;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          padding: 0;
+        }
+      
+        .slider-dots .dot.active {
+          background: white;
+        }
+      
+        /* Original Scroll Animation */
+        .scroll-indicator {
+          position: absolute;
+          bottom: 30px;
+          left: 50%;
+          transform: translateX(-50%);
+          color: white;
+          text-align: center;
+          z-index: 2;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-size: 14px;
+          letter-spacing: 1px;
+        }
+      
+        .mouse {
+          width: 24px;
+          height: 40px;
+          border: 2px solid white;
+          border-radius: 12px;
+          margin-bottom: 8px;
+          position: relative;
+        }
+      
+        .wheel {
+          width: 4px;
+          height: 8px;
+          background: white;
+          border-radius: 2px;
+          position: absolute;
+          top: 6px;
+          left: 50%;
+          transform: translateX(-50%);
+          animation: scroll-wheel 2s infinite;
+        }
+      
+        @keyframes scroll-wheel {
+          0% {
+            top: 6px;
+            opacity: 1;
+          }
+          50% {
+            top: 12px;
+            opacity: 0.8;
+          }
+          100% {
+            top: 18px;
+            opacity: 0;
+          }
+        }
+      </style>
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const slides = document.querySelectorAll('.hero-slide');
+          const dots = document.querySelectorAll('.slider-dots .dot');
+          let currentSlide = 0;
+          const slideCount = slides.length;
+          let slideInterval;
+      
+          // Initialize slider
+          function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentSlide = index;
+          }
+      
+          // Next slide
+          function nextSlide() {
+            let newIndex = (currentSlide + 1) % slideCount;
+            showSlide(newIndex);
+          }
+      
+          // Auto-rotate slides every 5 seconds
+          function startSlider() {
+            slideInterval = setInterval(nextSlide, 5000);
+          }
+      
+          // Dot navigation
+          dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+              clearInterval(slideInterval);
+              showSlide(index);
+              startSlider();
+            });
+          });
+      
+          // Start the slider
+          startSlider();
+      
+          // Pause on hover
+          const slider = document.querySelector('.hero-slider');
+          slider.addEventListener('mouseenter', () => clearInterval(slideInterval));
+          slider.addEventListener('mouseleave', startSlider);
+        });
+      </script>
 
     <!-- Trusted By Section -->
     <section class="trusted-by">
