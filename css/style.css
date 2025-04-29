@@ -557,13 +557,13 @@
     margin-top: 1.5rem;
   }
   
-  .slider-controls {
+  .slider-controls-2 {
     display: flex;
     justify-content: center;
     gap: 15px;
   }
   
-  .slider-controls button {
+  .slider-controls-2 button {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -574,7 +574,7 @@
     transition: all 0.3s ease;
   }
   
-  .slider-controls button:hover {
+  .slider-controls-2 button:hover {
     background-color: var(--primary-dark);
     color: var(--text-light);
   }

@@ -97,8 +97,9 @@
           </div>
           <div class="container">
             <div class="hero-content">
-              <h1 class="animate-on-scroll" style="font-size: 3.5rem; margin-top: 250px;">AI</h1>
-              <p class="animate-on-scroll" style="font-size: 1.24rem; margin-top: 17px;">= difference</p>
+              <h1 class="animate-on-scroll" style="font-size: 8rem; margin-top: 200px; margin-bottom: 0px;">AI</h1>
+              <h1 class="animate-on-scroll" style="font-size: 4rem; margin-top: 0px;">= difference</h1>
+              <!-- <p class="animate-on-scroll" style="font-size: 1.24rem; margin-top: 17px;">= difference</p> -->
               <div class="hero-buttons animate-on-scroll">
                 <a href="programs.html" class="cta-button primary">View Programs</a>
                 <a href="partnerships.html" class="cta-button secondary">Partner With Us</a>
@@ -168,7 +169,7 @@
         .hero-content h1 {
             font-size: 3rem;
             margin-bottom: 1.5rem;
-            margin-top: 250px;
+            margin-top: 200px;
             }
         
         .hero-content p {
@@ -354,22 +355,118 @@
     <!-- Trusted By Section -->
     <section class="trusted-by">
         <div class="container">
-            <p>Trusted by leading organizations worldwide</p>
-            <div class="logo-grid">
-                <img src="assets/logos/AIESEC.svg" alt="Client Logo" loading="lazy">
-                <img src="assets/logos/Rajthali.svg" alt="Client Logo" loading="lazy">
-                <img src="assets/logos/pidot-logo.svg" alt="Client Logo" loading="lazy">
-                <img src="assets/logos/thinespo.svg" alt="Client Logo" loading="lazy">
-                <img src="assets/logos/client5.png" alt="Client Logo" loading="lazy">
+            <p>Trusted by leading Partners & Supporters</p>
+            <div class="logo-marquee">
+                <div class="logo-track">
+                    <!-- First set of logos (visible) -->
+                    <img src="assets/logos/AIESEC.svg" alt="AIESEC" loading="lazy">
+                    <img src="assets/logos/Rajthali.svg" alt="Rajthali" loading="lazy">
+                    <img src="assets/logos/pidot-logo.svg" alt="PI DOT" loading="lazy">
+                    <img src="assets/logos/thinespo.svg" alt="Thinespo" loading="lazy">
+                    <img src="assets\logos\AG_Hub.png" alt="AG_Hub" loading="lazy">
+                    <img src="assets\logos\THUB-LOGO.png" alt="THUB-LOGO" loading="lazy">
+                    <img src="assets\logos\unschool.webp" alt="unschool" loading="lazy">
+                    <img src="assets\logos\wishwa-logo.png" alt="wishwa-logo" loading="lazy">
+                    <img src="assets/logos/client9.png" alt="Client" loading="lazy">
+                    <img src="assets/logos/client10.png" alt="Client" loading="lazy">
+                    
+                    <!-- Duplicated set for seamless looping -->
+                    <img src="assets/logos/AIESEC.svg" alt="AIESEC" loading="lazy">
+                    <img src="assets/logos/Rajthali.svg" alt="Rajthali" loading="lazy">
+                    <img src="assets/logos/pidot-logo.svg" alt="PI DOT" loading="lazy">
+                    <img src="assets/logos/thinespo.svg" alt="Thinespo" loading="lazy">
+                    <img src="assets/logos/client5.png" alt="Client" loading="lazy">
+                    <img src="assets/logos/client6.png" alt="Client" loading="lazy">
+                    <img src="assets/logos/client7.png" alt="Client" loading="lazy">
+                    <img src="assets/logos/client8.png" alt="Client" loading="lazy">
+                    <img src="assets/logos/client9.png" alt="Client" loading="lazy">
+                    <img src="assets/logos/client10.png" alt="Client" loading="lazy">
+                </div>
             </div>
         </div>
     </section>
+    
+    <style>
+        .trusted-by {
+            padding: 60px 0;
+            background: #f8fafc;
+            overflow: hidden;
+        }
+        
+        .trusted-by .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .trusted-by p {
+            color: #64748b;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+        
+        .logo-marquee {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .logo-track {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            width: max-content;
+            animation: scroll 30s linear infinite;
+            padding: 20px 0;
+        }
+        
+        .logo-track img {
+            height: 40px;
+            width: auto;
+            max-width: 150px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        
+        .logo-track img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        
+        /* Pause on hover */
+        .logo-marquee:hover .logo-track {
+            animation-play-state: paused;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .logo-track {
+                gap: 30px;
+            }
+            
+            .logo-track img {
+                height: 30px;
+            }
+        }
+    </style>
 
     <!-- Solutions Overview -->
     <section class="solutions-overview">
         <div class="container">
             <div class="section-header">
-                <h2>Our Comprehensive Solutions</h2>
+                <h2>Our Comprehensive Products</h2>
                 <p>Tailored to meet your unique business challenges and drive sustainable growth</p>
             </div>
             <div class="solutions-grid">
@@ -378,7 +475,7 @@
                         <img src="assets\logos\Edusphere.svg" alt="">
                         <!-- <i class="fas fa-graduation-cap"></i> -->
                     </div>
-                    <h3>Education Transformation</h3>
+                    <h3>Edusphere</h3>
                     <p>Revolutionizing learning experiences through technology and innovative methodologies</p>
                     <a href="edusphere.html" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
@@ -387,7 +484,7 @@
                         <img src="assets\logos\Genesis.svg" alt="">
                         <!-- <i class="fas fa-briefcase"></i> -->
                     </div>
-                    <h3>Talent Development</h3>
+                    <h3>Genesis</h3>
                     <p>Bridging the gap between academia and industry with corporate-led training programs</p>
                     <a href="genesis.html" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
@@ -396,7 +493,7 @@
                         <img src="assets\logos\Axiom.svg" alt="">
                         <!-- <i class="fas fa-robot"></i> -->
                     </div>
-                    <h3>Business Automation</h3>
+                    <h3>Axiom</h3>
                     <p>Streamlining operations and enhancing efficiency with AI-driven solutions</p>
                     <a href="axiom.html" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
@@ -409,12 +506,12 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item animate-on-scroll">
-                    <div class="stat-number" data-count="10">0</div>
-                    <div class="stat-label">Active Clients</div>
+                    <div class="stat-number" data-count="314">0</div>
+                    <div class="stat-label">Million impact - Goal</div>
                 </div>
                 <div class="stat-item animate-on-scroll">
-                    <div class="stat-number" data-count="314">0</div>
-                    <div class="stat-label">Million Impact</div>
+                    <div class="stat-number" data-count="40">0</div>
+                    <div class="stat-label">corporate sharing undergrads</div>
                 </div>
                 <div class="stat-item animate-on-scroll">
                     <div class="stat-number" data-count="25">0</div>
@@ -430,15 +527,17 @@
 
     <!-- Case Studies -->
     <section class="case-studies">
-        <div class="container">
-            <div class="section-header">
-                <h2>Success Stories</h2>
-                <p>Discover how we've helped organizations achieve remarkable results</p>
-            </div>
-            <div class="case-study-slider">
-                <div class="case-study">
+    <div class="container">
+        <div class="section-header">
+            <h2>Success Stories</h2>
+            <p>Discover how we've helped organizations achieve remarkable results</p>
+        </div>
+        <div class="case-study-slider">
+            <div class="slider-track">
+                <!-- Case Study 1 -->
+                <div class="case-study active">
                     <div class="case-study-image">
-                        <img src="assets\images\EduSuccess.jpg" alt="Case Study" loading="lazy">
+                        <img src="assets/images/EduSuccess.jpg" alt="Education Case Study" loading="lazy">
                     </div>
                     <div class="case-study-content">
                         <span class="case-study-category">Education Sector</span>
@@ -447,9 +546,11 @@
                         <a href="#" class="read-case-study">Read Case Study <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
+                
+                <!-- Case Study 2 -->
                 <div class="case-study">
                     <div class="case-study-image">
-                        <img src="assets\images\GenSuccess.jpg" alt="Case Study" loading="lazy">
+                        <img src="assets/images/GenSuccess.jpg" alt="Corporate Training Case Study" loading="lazy">
                     </div>
                     <div class="case-study-content">
                         <span class="case-study-category">Corporate Training</span>
@@ -459,12 +560,14 @@
                     </div>
                 </div>
             </div>
-            <div class="slider-controls">
+            <div class="slider-controls-2" style="margin-top: 50px;">
                 <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
                 <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
+    </div>
     </section>
+    
 
     <!-- Testimonials -->
     <section class="testimonials">
